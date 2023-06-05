@@ -2,13 +2,8 @@
   "profiles": {
     "compartimoss_swa_fx_api": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7058"
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "httpPort": 32883,
-      "useSSL": false
+      "commandLineArgs": "--port 7213",
+      "launchBrowser": false
     }
   }
 }

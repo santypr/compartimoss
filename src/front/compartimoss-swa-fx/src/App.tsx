@@ -12,9 +12,10 @@ function App() {
   useEffect(() => {
     (async () => {
       const response = await fetch('/api/hellocompartimoss?name=CompartiMOSS');
-      const data = await response.json();
+      console.log(response);
+      const data = await response;
       console.log(data);
-      setHello(data.message);
+      setHello(data.toString());
       console.log(hello);
     })();
   }, []);

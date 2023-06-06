@@ -8,11 +8,12 @@ function App() {
   const [hello, setHello] = useState('');
 
   useEffect(() => {
-    (async function () {
-      const { text } = await( await fetch(`/api/hellocompartimoss?name=CompartiMOSS`)).json();
-      setHello(text);
+    (async () => {
+      const response = await fetch('/api/hellocompartimoss?name=CompartiMOSS');
+      const data = await response.json();
+      setHello(data.message);
     })();
-  });
+  }, []);
 
 
   return (

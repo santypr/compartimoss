@@ -7,11 +7,15 @@ function App() {
   const [count, setCount] = useState(0);
   const [hello, setHello] = useState('');
 
+  /* add a call to the api with one useEffect */
+
   useEffect(() => {
     (async () => {
       const response = await fetch('/api/hellocompartimoss?name=CompartiMOSS');
       const data = await response.json();
+      console.log(data);
       setHello(data.message);
+      console.log(hello);
     })();
   }, []);
 
@@ -19,7 +23,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>Message from Fx Api: {hello}</h1>
+        <h1>Message from Fx Api: {hello}  v0.1</h1>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

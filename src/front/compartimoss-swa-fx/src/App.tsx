@@ -13,9 +13,9 @@ function App() {
     (async () => {
       const response = await fetch('/api/hellocompartimoss?name=CompartiMOSS');
       console.log(response);
-      const data = await response;
+      const data = await response.text();
       console.log(data);
-      setHello(data.toString());
+      setHello(data);
       console.log(hello);
     })();
   }, []);

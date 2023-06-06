@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      const { text } = await( await fetch(`/api/hellocompartimoss`)).json();
+      const { text } = await( await fetch(`/api/hellocompartimoss?name=CompartiMOSS`)).json();
       setHello(text);
     })();
   });
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>{hello}</h1>
+        <h1>Message from Fx Api: {hello}</h1>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

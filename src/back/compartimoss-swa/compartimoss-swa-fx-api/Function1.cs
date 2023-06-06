@@ -12,7 +12,7 @@ namespace compartimoss_swa_fx_api
 {
     public static class Function1
     {
-        [FunctionName("Function1")]
+        [FunctionName("HelloCompartimoss")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
